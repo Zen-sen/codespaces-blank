@@ -1,0 +1,68 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+}
+
+body {
+  background-color: #F9FAFB;
+  min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 200ms;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+@layer base {
+  html {
+    @apply antialiased text-gray-900;
+  }
+  
+  body {
+    @apply bg-gray-50 min-h-screen;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-gray-900;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-gray-800;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+}
